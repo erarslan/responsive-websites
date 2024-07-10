@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #404040;
+  text-align: center;
+}
+
+/* Typography */
+
+h1 {
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+
+h1 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2 + p {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.top-text {
+  margin: 0 auto;
+  padding-top: 2px;
+  font-size: 0.625rem;
+  color: #f18119;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  order: -1;
+  border-top: 5px solid red;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+}
+
+.final-message {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+/* Big Picture Part */
+
+.big {
+  background-color: #404040;
+  background-image: url(/bbq-splash/img/ribs.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 0 0.5em 2em;
+}
+
+/* I commented this way because it causes slight performance issues. */
+/* .big > *,
+.reg > * {
+  max-width: 400px;
+  margin-left: auto;  
+  margin-right: auto;
+} */
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container-big {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+/* Reg Part */
+
+.reg {
+  padding: 2em 1em;
+}
+
+/* Form */
+
+.reg-form {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+input {
+  margin-bottom: 0.75em;
+  text-align: inherit;
+  padding: 0.25em;
+  border: 1px solid #9c9c9c;
+  transition: transform 320ms;
+}
+
+input:hover,
+input:focus {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-image: linear-gradient(to left, #ff713b, #ffa51d);
+  color: white;
+  transform: scale(1);
+  transition: transform 320ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: scale(1.1);
+}
+/* Media Query */
+
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    font-size: 1.125rem;
+  }
+
+  .reg,
+  .big {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container-big {
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+}
