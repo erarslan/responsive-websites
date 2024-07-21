@@ -75,3 +75,44 @@ strong {
 .col {
   grid-column: 2/-2;
 }
+
+/* Footer */
+
+.footer {
+  background-color: #ebebeb;
+  padding: 4em 0;
+  text-align: center;
+}
+
+.footer-list {
+  order: -1;
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  color: black;
+  font-size: 1.75rem;
+  margin: 0 0.5em;
+}
+
+.social-link:hover {
+  opacity: 0.6;
+}
+
+.footer-main {
+  opacity: 0.5;
+}
+
+.footer-fineprint {
+  margin-top: 4em;
+  font-size: 0.85rem;
+}
+
+.footer-main,
+.footer-list {
+  grid-column: 2/-2;
+}
