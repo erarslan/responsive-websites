@@ -68,18 +68,24 @@ strong {
 .hero {
   background-image: url(./img/hero-bg.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   color: white;
-  padding: 4em 0;
+  padding: 8em 0 4em;
 }
 
 .hero > * {
   grid-column: 2 /-2;
 }
 
+@media (min-width: 400px) {
+  .hero > * {
+    margin-right: 20%;
+  }
+}
+
 @media (min-width: 600px) {
   .hero {
-    padding: 6em 0;
+    padding: 12em 0 6em;
   }
 
   .hero > * {
@@ -177,6 +183,12 @@ strong {
   display: flex;
 }
 
+.header-home {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+}
+
 .logo-link {
   background-color: #ffe600;
   padding-top: 2em;
@@ -216,8 +228,8 @@ strong {
   bottom: 0;
   right: 0;
   left: 100%;
-  background-color: black;
   transition: transform 250ms;
+  background: black;
 }
 
 .navbar-open {
@@ -267,8 +279,8 @@ strong {
   .nav-link {
     font-size: 1rem;
   }
-}
 
-img {
-  color: red;
+  .header-home .navbar {
+    background: transparent;
+  }
 }
